@@ -10,7 +10,7 @@
 
 
   $('.prev, .next').click(function(){
-      var first = $('first > i')
+      var first = $('i.first')
       var circleEl = $('i.active')
       circleEl.removeClass('active')
       if(circleEl.hasClass('last')){
