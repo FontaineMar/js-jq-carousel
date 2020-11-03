@@ -1,20 +1,11 @@
   $('.prev, .next').click(function(){
-
+      var circleEl = $('i.active')
       var immaginiEl = $('img.active')
+      circleEl.removeClass('active')
       immaginiEl.removeClass('active')
       if(immaginiEl.hasClass('last')){
-        $('.first').addClass('active')
+        $('img.first , i.first').addClass('active')
       } else {immaginiEl.next().addClass('active')
-      }
-  })
-
-
-  $('.prev, .next').click(function(){
-      var first = $('i.first')
-      var circleEl = $('i.active')
-      circleEl.removeClass('active')
-      if(circleEl.hasClass('last')){
-        first.addClass('active')
-      } else {circleEl.next().addClass('active')
+        circleEl.next().addClass('active')
       }
   })
